@@ -9,23 +9,15 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/textsimilarity';
 
 /**
- * Make a POST request to the Text Similarity API
+ * Make a GET request to the Text Similarity API
  */
 async function callTextSimilarityAPI() {
   try {
-    // Request body
-    const requestBody &#x3D; {
-    &quot;text1&quot;: &quot;I&#x27;m so excited that tomorrow is going to be sunny! Can&#x27;t wait!&quot;,
-    &quot;text2&quot;: &quot;We&#x27;re pretty excited about the weather tomorrow. It&#x27;s going to be sunny!&quot;
-};
-
     const response = await fetch(API_URL, {
-      method: 'POST',
+      method: 'GET',
       headers: {
-        'x-api-key': API_KEY,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(requestBody)
+        'x-api-key': API_KEY
+      }
     });
 
     // Check if response is successful
