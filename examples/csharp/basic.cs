@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/textsimilarity";
 
         /// <summary>
-        /// Make a POST request to the Text Similarity API
+        /// Make a GET request to the Text Similarity API
         /// </summary>
         static async Task<JsonDocument> CallTextSimilarityAPI()
         {
@@ -29,13 +29,7 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                // Request body
-                var requestBody &#x3D; new { text1 &#x3D; &quot;I&#x27;m so excited that tomorrow is going to be sunny! Can&#x27;t wait!&quot;, text2 &#x3D; &quot;We&#x27;re pretty excited about the weather tomorrow. It&#x27;s going to be sunny!&quot; };
-
-                var jsonContent = JsonSerializer.Serialize(requestBody);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(API_URL, content);
+                var response = await client.GetAsync(API_URL);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
