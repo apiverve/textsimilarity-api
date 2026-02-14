@@ -12,13 +12,8 @@ public class BasicExample {
         TextSimilarityAPIClient client = new TextSimilarityAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Request body
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;text1&quot;, &quot;I&#x27;m so excited that tomorrow is going to be sunny! Can&#x27;t wait!&quot;);
-        parameters.put(&quot;text2&quot;, &quot;We&#x27;re pretty excited about the weather tomorrow. It&#x27;s going to be sunny!&quot;);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
