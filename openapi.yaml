@@ -1,23 +1,25 @@
 openapi: 3.0.4
 info:
   title: Text Similarity
-  description: Text Similarity is a simple tool for checking the similarity between two texts. It returns the similarity score.
+  description: >-
+    Text Similarity is a simple tool for checking the similarity between two
+    texts. It returns the similarity score.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/textsimilarity:
     post:
       summary: Check Similarity
-      description: Text Similarity is a simple tool for checking the similarity between two texts. It returns the similarity score.
+      description: Check the similarity between two texts
       operationId: textsimilarity
       parameters: []
       responses:
@@ -35,11 +37,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   simiarity: 45.83
                   similarityCaseSensitive: 47.22
@@ -51,7 +53,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
       requestBody:
         required: true
         content:
@@ -62,17 +64,14 @@ paths:
                 text1:
                   type: string
                   description: The first text to compare. Must be less than 1000 characters
-                  example: I'm so excited that tomorrow is going to be sunny! Can't wait!
                 text2:
                   type: string
-                  description: The second text to compare. Must be less than 1000 characters
-                  example: We're pretty excited about the weather tomorrow. It's going to be sunny!
+                  description: >-
+                    The second text to compare. Must be less than 1000
+                    characters
               required:
-              - text1
-              - text2
-              example:
-                text1: I'm so excited that tomorrow is going to be sunny! Can't wait!
-                text2: We're pretty excited about the weather tomorrow. It's going to be sunny!
+                - text1
+                - text2
 components:
   securitySchemes:
     api_key:
@@ -80,4 +79,7 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
+sampleRequest:
+  text1: I'm so excited that tomorrow is going to be sunny! Can't wait!
+  text2: We're pretty excited about the weather tomorrow. It's going to be sunny!
