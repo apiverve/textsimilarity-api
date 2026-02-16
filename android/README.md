@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:textsimilarity-api:1.1.13'
+    implementation 'com.github.apiverve:textsimilarity-api:1.1.14'
 }
 ```
 
@@ -47,8 +47,8 @@ TextSimilarityAPIClient client = new TextSimilarityAPIClient("YOUR_API_KEY");
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text1", "");
-    parameters.put("text2", "");
+    parameters.put("text1", "I'm so excited that tomorrow is going to be sunny! Can't wait!");
+    parameters.put("text2", "We're pretty excited about the weather tomorrow. It's going to be sunny!");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
