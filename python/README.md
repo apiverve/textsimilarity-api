@@ -44,7 +44,10 @@ from apiverve_textsimilarity.apiClient import TextsimilarityAPIClient
 # Initialize the client with your APIVerve API key
 api = TextsimilarityAPIClient("[YOUR_API_KEY]")
 
-query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
 ```
 
 ###### Simple Request
@@ -125,7 +131,10 @@ from apiverve_textsimilarity.apiClient import TextsimilarityAPIClient, Textsimil
 
 api = TextsimilarityAPIClient("[YOUR_API_KEY]")
 
-query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
 
 try:
     result = api.execute(query)
@@ -146,7 +155,10 @@ from apiverve_textsimilarity.apiClient import TextsimilarityAPIClient, Textsimil
 
 api = TextsimilarityAPIClient("[YOUR_API_KEY]")
 
-query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
 
 try:
     result = api.execute(query)
@@ -180,7 +192,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_textsimilarity.apiClient import TextsimilarityAPIClient, TextsimilarityAPIClientError
 
-query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
 
 # Using context manager ensures proper cleanup
 with TextsimilarityAPIClient("[YOUR_API_KEY]") as api:
@@ -206,7 +221,10 @@ from apiverve_textsimilarity.apiClient import TextsimilarityAPIClient
 # Enable debug mode
 api = TextsimilarityAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -221,8 +239,12 @@ from apiverve_textsimilarity.apiClient import TextsimilarityAPIClient
 
 api = TextsimilarityAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!",
+    "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!"
+}
+
 try:
-    query = { "text1": "I'm so excited that tomorrow is going to be sunny! Can't wait!", "text2": "We're pretty excited about the weather tomorrow. It's going to be sunny!" }
     result = api.execute(query)
     print(result)
 finally:
