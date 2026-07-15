@@ -4,23 +4,35 @@ declare module '@apiverve/textsimilarity' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface textsimilarityResponse {
     status: string;
     error: string | null;
     data: TextSimilarityData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface TextSimilarityData {
-      simiarity:               number;
-      similarityCaseSensitive: number;
+      simiarity:               number | null;
+      similarityCaseSensitive: number | null;
       difference:              Difference;
   }
   
   interface Difference {
-      count:      number;
-      percentage: number;
+      count:      number | null;
+      percentage: number | null;
   }
 
   export default class textsimilarityWrapper {
