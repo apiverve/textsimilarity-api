@@ -25,15 +25,18 @@ namespace APIVerve.API.TextSimilarity
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("simiarity")]
-        public double Simiarity { get; set; }
+        public double? Simiarity { get; set; }
 
         [JsonProperty("similarityCaseSensitive")]
-        public double SimilarityCaseSensitive { get; set; }
+        public double? SimilarityCaseSensitive { get; set; }
 
         [JsonProperty("difference")]
         public Difference Difference { get; set; }
@@ -42,9 +45,21 @@ namespace APIVerve.API.TextSimilarity
     public partial class Difference
     {
         [JsonProperty("count")]
-        public long Count { get; set; }
+        public long? Count { get; set; }
 
         [JsonProperty("percentage")]
-        public double Percentage { get; set; }
+        public double? Percentage { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
