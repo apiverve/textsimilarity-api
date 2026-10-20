@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Text Similarity
   description: >-
-    Text Similarity is a simple tool for checking the similarity between two
-    texts. It returns the similarity score.
+    Text Similarity compares two text strings and calculates their percentage
+    match score. It returns case-insensitive and case-sensitive similarity
+    scores plus the count and proportion of differing words.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/textsimilarity:
     post:
-      summary: Check Similarity
+      summary: Text Similarity
       description: Check the similarity between two texts
       operationId: textsimilarity
       parameters: []

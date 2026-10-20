@@ -1,13 +1,13 @@
-# [Text Similarity API](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Text Similarity API](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Text Similarity is a simple tool for checking the similarity between two texts. It returns the similarity score.
+Text Similarity compares two text strings and calculates their percentage match score. It returns case-insensitive and case-sensitive similarity scores plus the count and proportion of differing words.
 
 The Text Similarity API provides a simple, reliable way to integrate text similarity functionality into your applications. Built for developers who need production-ready text similarity capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -169,7 +169,7 @@ go get github.com/apiverve/textsimilarity-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Text Similarity API](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Text Similarity API](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/textsimilarity](https://docs.apiverve.com/ref/textsimilarity)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -199,11 +199,33 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Text Similarity API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "simiarity": 45.83,
+    "similarityCaseSensitive": 47.22,
+    "difference": {
+      "count": 7,
+      "percentage": 58.33
+    }
+  }
 }
 ```
 
@@ -211,7 +233,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Text Similarity API](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Text Similarity API](https://apiverve.com/marketplace/textsimilarity?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
