@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/textsimilarity",
-  "version": "1.2.0",
-  "description": "Text Similarity is a simple tool for checking the similarity between two texts. It returns the similarity score.",
+  "version": "1.2.2",
+  "description": "Text Similarity compares two text strings and calculates their percentage match score. It returns case-insensitive and case-sensitive similarity scores plus the count and proportion of differing words.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "text similarity", "text similarity checker", "text similarity api", "text similarity tool", "text similarity software"
+    "text similarity api", "compare two texts", "string similarity score", "text match percentage", "check text similarity"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/textsimilarity-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/textsimilarity?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/textsimilarity?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
