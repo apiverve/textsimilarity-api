@@ -32,11 +32,14 @@ namespace APIVerve.API.TextSimilarity
 
     public partial class Data
     {
-        [JsonProperty("simiarity")]
-        public double? Simiarity { get; set; }
+        [JsonProperty("similarity")]
+        public double? Similarity { get; set; }
 
         [JsonProperty("similarityCaseSensitive")]
         public double? SimilarityCaseSensitive { get; set; }
+
+        [JsonProperty("semanticSimilarity")]
+        public double? SemanticSimilarity { get; set; }
 
         [JsonProperty("difference")]
         public Difference Difference { get; set; }
