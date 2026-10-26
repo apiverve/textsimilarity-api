@@ -122,8 +122,9 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "simiarity": 45.83,
+    "similarity": 45.83,
     "similarityCaseSensitive": 47.22,
+    "semanticSimilarity": 88.33,
     "difference": {
       "count": 7,
       "percentage": 58.33

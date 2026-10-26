@@ -25,8 +25,9 @@ declare module '@apiverve/textsimilarity' {
 
 
   interface TextSimilarityData {
-      simiarity:               number | null;
+      similarity:              number | null;
       similarityCaseSensitive: number | null;
+      semanticSimilarity:      number | null;
       difference:              Difference;
   }
   
